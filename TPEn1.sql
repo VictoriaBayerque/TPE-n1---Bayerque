@@ -29,8 +29,3 @@ INSERT INTO `Books` (`book_id`, `book_name`, `book_author`, `book_series`, `book
 INSERT INTO `Books` (`book_id`, `book_name`, `book_author`, `book_series`, `book_seriesnumber`, `book_summary`, `book_summaryauthor`, `book_summaryauthor_id`) VALUES (NULL, 'From blood and ash', 'Jennifer L. Armentrout', 'From blood and ash', 1, 'Noblesse oblige and the protagonist...', 'Malady', 1);
 
 ALTER TABLE `Books` ADD CONSTRAINT `fk_booksummaryauthorid` FOREIGN KEY (`book_summaryauthor_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-ALTER TABLE `Books` 
-ADD CONSTRAINT `fk_booksummaryauthorid`
-FOREIGN KEY (`book_summaryauthor_id`) 
-REFERENCES `users`(`user_id`) 
-ON DELETE RESTRICT ON UPDATE RESTRICT;
